@@ -23,5 +23,6 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "typeRoots": ["node_modules/@types", "src/overlay-scrollbars-smooth/types"]
 }
