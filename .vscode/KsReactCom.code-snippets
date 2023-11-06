@@ -1,0 +1,40 @@
+{
+  "React-TSX(Function)": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "KsReactComArco",
+    "body": [
+      "import styles from './index.module.less';",
+      "import { ReactNode } from 'react';",
+      "",
+      "/**",
+      " * 组件Props属性：$2",
+      " */",
+      "export interface I$1Props {",
+      "    /**",
+      "    * 子元素",
+      "    */",
+      "    children?: ReactNode;",
+      "}",
+      "",
+      "/**",
+      " * 组件Props属性：$2 默认值",
+      " */",
+      "const defaultProps: I$1Props = {};",
+      "",
+      "/**",
+      " * 组件：$2",
+      " */",
+      "const $1 = (props: I$1Props) => {",
+      "    props = { ...defaultProps, ...props };",
+      "    const children = props.children;",
+      "",
+      "    return <></>;",
+      "}",
+      "",
+      "$1.defaultProps = defaultProps;",
+      "",
+      "export default $1;"
+    ],
+    "description": "组件模板"
+  }
+}
