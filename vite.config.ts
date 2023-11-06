@@ -27,5 +27,37 @@ export default defineConfig({
         }
       ]
     })
-  ]
+  ],
+  css: {
+    modules: {
+      // generateScopedName: '[name]__[local]'
+      generateScopedName: '[local]'
+    }
+  },
+  build: {
+    minify: 'terser',
+    lib: {
+      entry: 'src/overlay-scrollbars-smooth/index.ts',
+      name: 'ReactOverlayScrollbarsSmooth',
+      fileName: (format) => `react-overlay-scrollbars-smooth.${format}.js`
+    },
+    rollupOptions: {
+      // 确保外部化处理那些你不想打包进库的依赖
+      external: ['react', 'react-dom', 'classnames', 'overlayscrollbars', 'overlayscrollbars-react', 'smoothscroll-for-websites'],
+      output: {
+        // 为各种格式提供全局变量名
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM'
+        },
+        // 这里定义了静态资源构建输出的命名
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') {
+            return 'react-overlay-scrollbars-smooth.css';
+          }
+          return assetInfo.name;
+        }
+      }
+    }
+  }
 });
