@@ -1,8 +1,8 @@
 {
   "name": "@kwooshung/react-overlay-scrollbars-smooth",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "title": "React Overlay Scrollbars Smooth",
-  "description": "A React scrollbar customization component that hides the native scrollbar, provides a custom-styled overlay scrollbar, and retains the native functionality and feel, while also featuring scroll inertia.",
+  "description": "A React scrollbar custom component that hides the native scroll bar, provides a custom style overlay scroll bar, and retains the native functionality and feel while having scrolling inertia.",
   "private": false,
   "tags": [
     "kwooshung",
@@ -47,7 +47,7 @@
     "test:ci": "jest --ci",
     "commit": "pnpm changelog && git add . && cz-customizable",
     "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0 && node plugin-customizable.cjs",
-    "release": "standard-version && pnpm changelog && git push --follow-tags"
+    "release": "standard-version-helper -cmd pnpm changelog"
   },
   "config": {
     "cz-customizable": {
