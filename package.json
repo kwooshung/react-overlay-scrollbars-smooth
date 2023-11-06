@@ -1,6 +1,6 @@
 {
   "name": "@kwooshung/react-overlay-scrollbars-smooth",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "title": "React Overlay Scrollbars Smooth",
   "description": "A React scrollbar custom component that hides the native scroll bar, provides a custom style overlay scroll bar, and retains the native functionality and feel while having scrolling inertia.",
   "private": false,
