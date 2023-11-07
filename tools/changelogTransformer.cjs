@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const fs = require('fs');
 
 const CHANGELOG_PATH = 'CHANGELOG.md'; // replace with your changelog file path

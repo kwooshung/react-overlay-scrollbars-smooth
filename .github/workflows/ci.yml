@@ -59,15 +59,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # 自动发布到 npm
-      # - name: Sync to Npm.js
-      #   uses: actions/setup-node@main
-      #   with:
-      #     node-version: '14.0.0'
-      #     registry-url: https://registry.npmjs.org/
-      # - name: Publish to Npm.js
-      #   run: npm publish --access public
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: Sync to Npm.js
+        uses: actions/setup-node@main
+        with:
+          node-version: '14.0.0'
+          registry-url: https://registry.npmjs.org/
+      - name: Publish to Npm.js
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   finish:
     needs: build-and-deploy

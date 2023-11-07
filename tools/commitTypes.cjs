@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 module.exports = [
   { value: '🎉 init', name: '初始：初始提交' },
   { value: '✨ feat', name: '特性：新的特性' },

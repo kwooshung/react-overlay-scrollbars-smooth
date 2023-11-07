@@ -11,7 +11,7 @@ const defaultProps: IOverlayScrollbarsSmoothProps = {
   tag: 'div',
   options: {
     scrollbars: {
-      theme: 'os-theme-auto'
+      theme: 'os-theme-dark'
     }
   }
 };

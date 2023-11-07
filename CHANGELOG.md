@@ -1,6 +1,8 @@
-## 🎉 v## 1.1.0 `2023-11-06)`
+## 🎉 v1.1.1 `2023-11-06`
 
-- 没有特别说明
+### ✨ 特性：新的特性
+
+- first Create ([1b59f5e](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/1b59f5e))
 
 ---
 
