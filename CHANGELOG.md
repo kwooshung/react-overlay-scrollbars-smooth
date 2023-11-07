@@ -1,3 +1,16 @@
+## 🎉 v1.1.2 `2023-11-07`
+
+### ✨ 特性：新的特性
+
+- add components ([b27bef6](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/b27bef6))
+- update ([f8ee2e5](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/f8ee2e5))
+
+### 📦️ 发布：发布新版本
+
+- 1.1.2 ([040c5bd](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/040c5bd))
+
+---
+
 ## 🎉 v1.1.1 `2023-11-06`
 
 ### ✨ 特性：新的特性
