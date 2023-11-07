@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const CHANGELOG_PATH = 'CHANGELOG.md'; // replace with your changelog file path
+const CHANGELOG_PATH = 'CHANGELOG.md'; // 替换为你的changelog文件路径
 
 const types = require('./commitTypes.cjs');
 
@@ -20,15 +20,36 @@ const getSimpleTypeName = (name) => {
 };
 
 const transformChangelog = (content) => {
-  const sections = content.split('## <small>');
+  // 检查内容中是否包含 '## <small>' 来决定如何分割
+  const sections = content.includes('## <small>')
+    ? content.split('## <small>')
+    : content
+        .split('## ')
+        .slice(1)
+        .map((s) => `## ${s}`);
   let result = '';
   let isFirstVersion = true;
 
   for (const section of sections) {
     if (!section.trim()) continue;
 
+    // 检查section中是否使用了 <small> 标签
+    const isUsingSmallTag = section.includes('<small>');
     const [header, ...commits] = section.split('\n').filter(Boolean);
-    const [version, date] = header.split(' (');
+    let version, date;
+
+    // 根据是否使用 <small> 标签来提取版本号和日期
+    if (isUsingSmallTag) {
+      [version, date] = header.split(' (');
+    } else {
+      [version, date] = header.replace('## ', '').split(' (');
+    }
+
+    date = date.replace(')', '').replace('</small>', '');
+
+    // 确保我们添加了版本前缀并正确格式化日期
+    version = version.trim().startsWith('v') ? version.trim() : `v${version.trim()}`;
+    date = date.trim();
 
     if (isFirstVersion) {
       isFirstVersion = false;
@@ -36,7 +57,7 @@ const transformChangelog = (content) => {
       result += '---\n\n';
     }
 
-    result += `## 🎉 v${version} \`${date.replace(')</small>', '')}\`\n`;
+    result += `## 🎉 ${version} \`${date}\`\n`;
 
     const categorized = {};
 
@@ -82,6 +103,9 @@ const transformChangelog = (content) => {
   return result;
 };
 
+// 读取CHANGELOG文件的内容
 const content = fs.readFileSync(CHANGELOG_PATH, 'utf-8');
+// 转换CHANGELOG内容
 const transformed = transformChangelog(content);
+// 将转换后的内容写回CHANGELOG文件
 fs.writeFileSync(CHANGELOG_PATH, transformed);

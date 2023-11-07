@@ -19,5 +19,6 @@ module.exports = [
   ['egg', '小彩蛋，小惊喜'],
   ['backend', '后端相关更改'],
   ['workflows', '工作流相关文件更改'],
+  ['tag', '新版本，新标签'],
   ['other', '其他修改']
 ];
