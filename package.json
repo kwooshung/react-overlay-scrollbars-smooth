@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/kwooshung/react-overlay-scrollbars-smooth/issues"
   },
-  "main": "dist/my-library.cjs.js",
+  "main": "dist/react-overlay-scrollbars-smooth.cjs.js",
   "module": "dist/react-overlay-scrollbars-smooth.esm.js",
   "unpkg": "dist/react-overlay-scrollbars-smooth.umd.js",
   "types": "dist/react-overlay-scrollbars-smooth.d.ts",
