@@ -1,5 +1,6 @@
-## 🎉 v1.2.0 `2023-11-07`
+## 🎉 v1.2.1 `2023-11-07`
 ### ⚙️ 配置：配置文件的更改
+- update ([62c214b](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/62c214b))
 - update ([fd36cb5](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/fd36cb5))
 
 ### 📦️ 发布：发布新版本
