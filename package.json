@@ -35,6 +35,9 @@
   "module": "dist/react-overlay-scrollbars-smooth.esm.js",
   "unpkg": "dist/react-overlay-scrollbars-smooth.umd.js",
   "types": "dist/react-overlay-scrollbars-smooth.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
