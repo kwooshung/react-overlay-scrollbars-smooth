@@ -1,3 +1,11 @@
+## 🎉 v1.2.0 `2023-11-07`
+
+### ⚙️ 配置：配置文件的更改
+
+- update ([fd36cb5](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/fd36cb5))
+
+---
+
 ## 🎉 v1.1.6 `2023-11-07`
 
 ### ⚙️ 配置：配置文件的更改
