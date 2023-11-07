@@ -1,6 +1,5 @@
-/* eslint-disable no-undef */
 module.exports = [
-  { value: '🎉 init', name: '初始：初始提交' },
+  { value: '🍻 init', name: '初始：初始提交' },
   { value: '✨ feat', name: '特性：新的特性' },
   { value: '🐛 fix', name: '修复：修复Bug' },
   { value: '📚 docs', name: '文档：变更的只有文档' },
@@ -13,12 +12,12 @@ module.exports = [
   { value: '🔗 deps', name: '依赖更新：更新依赖库或包' },
   { value: '⚙️ config', name: '配置：配置文件的更改' },
   { value: '📡 deploy', name: '部署：与项目部署相关的更改' },
-  { value: '🍻 release', name: '发布：发布新版本' },
+  { value: '📦️ release', name: '发布：发布新版本' },
   { value: '🗄️ migrations', name: '数据迁移：数据库或数据相关的更改' },
   { value: '🖌️ ui', name: '用户界面：调整和更改' },
   { value: '🏷️ i18n', name: '国际化：多语言国际化相关更改' },
   { value: '♿ a11y', name: '可访问性：提升产品的可访问性' },
-  { value: '✅ test', name: '测试：添加一个测试' },
+  { value: '✅ test', name: '测试：添加或更新测试' },
   { value: '🚧 wip', name: '开发中：尚未完成' },
   { value: '🚀 chore', name: '工具：开发工具变动 (构建、脚手架工具等)' },
   { value: '🔄 workflows', name: '工作流：CI 配置、脚本，等工作流相关文件更改' },

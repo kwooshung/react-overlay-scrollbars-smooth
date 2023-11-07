@@ -25,12 +25,12 @@ async function getReleases() {
   return data.map((release) => release.tag_name);
 }
 
-function extractChangelog(tag, changelogPath = 'CHANGELOG.md') {
+const extractChangelog = (tag, changelogPath = 'CHANGELOG.md') => {
   const changelog = fs.readFileSync(changelogPath, 'utf-8');
   const versionRegex = new RegExp(`## 🎉 ${tag} .+?\\n(.*?)(\\n## |\\n$)`, 's');
   const match = changelog.match(versionRegex);
   return match ? match[1].trim() : null;
-}
+};
 
 async function autoRelease() {
   const tags = await getTags();

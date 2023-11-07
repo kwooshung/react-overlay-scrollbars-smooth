@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react-swc';
 import vitePluginImp from 'vite-plugin-imp';
 
@@ -6,7 +6,8 @@ import vitePluginImp from 'vite-plugin-imp';
 export default defineConfig({
   base: './',
   server: {
-    port: 3000
+    port: 3000,
+    host: '0.0.0.0'
   },
   plugins: [
     react(),
@@ -28,6 +29,12 @@ export default defineConfig({
       ]
     })
   ],
+  test: {
+    globals: true,
+    setupFiles: './vitest-setup.ts',
+    environment: 'jsdom',
+    exclude: ['src/__visual_tests__', '**/node_modules/**', '**/dist/**', '**/cypress/**', '**/.{idea,git,cache,output,temp}/**']
+  },
   css: {
     modules: {
       // generateScopedName: '[name]__[local]'
@@ -39,6 +46,7 @@ export default defineConfig({
     lib: {
       entry: 'src/overlay-scrollbars-smooth/index.ts',
       name: 'ReactOverlayScrollbarsSmooth',
+      formats: ['cjs', 'es', 'umd'],
       fileName: (format) => `react-overlay-scrollbars-smooth.${format}.js`
     },
     rollupOptions: {
