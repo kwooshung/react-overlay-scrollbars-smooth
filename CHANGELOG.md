@@ -4,6 +4,7 @@
 - update ([fd36cb5](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/fd36cb5))
 
 ### 📦️ 发布：发布新版本
+- 1.2.1 ([c0da91e](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/c0da91e))
 - 1.2.0 ([82c9bb6](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/82c9bb6))
 
 ---

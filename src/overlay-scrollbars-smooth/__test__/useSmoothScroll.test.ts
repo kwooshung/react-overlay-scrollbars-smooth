@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react-hooks';
 import { vi, describe, it, expect, beforeEach } from 'vitest';
 import useSmoothScroll from '../useSmoothScroll';
 import SmoothScroll from '../SmoothScroll';
-import { ISmoothScrollbars } from '../types/interface';
+import { ISmoothScrollbars } from '../interfaces';
 
 vi.mock('../SmoothScroll', () => ({
   __esModule: true, // 这表示模块是ES模块
@@ -13,21 +13,6 @@ vi.mock('../SmoothScroll', () => ({
   }
 }));
 
-// 定义默认选项
-const defaultOptions: ISmoothScrollbars = {
-  frameRate: 150,
-  animationTime: 1000,
-  stepSize: 100,
-  pulseAlgorithm: true,
-  pulseScale: 4,
-  pulseNormalize: true,
-  accelerationDelta: 50,
-  accelerationMax: 3,
-  keyboardSupport: true,
-  arrowScroll: 50,
-  fixedBackground: true
-};
-
 describe('useSmoothScroll Hook', () => {
   beforeEach(() => {
     // 在每个测试用例开始前重置模拟函数的状态
@@ -37,12 +22,11 @@ describe('useSmoothScroll Hook', () => {
   it('应该使用默认选项调用SmoothScroll.bind', () => {
     const { rerender } = renderHook(() => useSmoothScroll());
     rerender();
-    expect(SmoothScroll.bind).toHaveBeenCalledWith(defaultOptions);
+    expect(SmoothScroll.bind).toHaveBeenCalledWith({});
   });
 
   it('当传入新的选项时，应该使用新的选项调用SmoothScroll.bind', () => {
     const customOptions: ISmoothScrollbars = {
-      ...defaultOptions,
       frameRate: 60
     };
     const { rerender } = renderHook(() => useSmoothScroll(customOptions));
@@ -52,7 +36,6 @@ describe('useSmoothScroll Hook', () => {
 
   it('当选项未改变时，不应再次调用SmoothScroll.bind', () => {
     const customOptions: ISmoothScrollbars = {
-      ...defaultOptions,
       frameRate: 60
     };
     const { rerender } = renderHook(() => useSmoothScroll(customOptions));

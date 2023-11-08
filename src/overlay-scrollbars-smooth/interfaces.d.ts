@@ -1,3 +1,6 @@
+import { ElementType, ReactNode } from 'react';
+import type { PartialOptions, EventListeners } from 'overlayscrollbars';
+
 /**
  * 接口：Scrollbars平滑属性
  */
