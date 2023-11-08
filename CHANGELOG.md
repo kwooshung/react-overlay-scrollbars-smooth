@@ -1,3 +1,9 @@
+## 🎉 v1.4.2 `2023-11-08`
+### ⚙️ 配置：配置文件的更改
+- update description ([e5deb20](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/e5deb20))
+
+---
+
 ## 🎉 v1.4.1 `2023-11-08`
 ### 📚 文档：变更的只有文档
 - fix installation commands ([cc5779c](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/cc5779c))
