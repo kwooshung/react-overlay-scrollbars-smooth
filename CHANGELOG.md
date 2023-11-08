@@ -1,6 +1,17 @@
-## 🎉 v1.3.0 `2023-11-08`
+## 🎉 v1.3.2 `2023-11-08`
 ### ⚙️ 配置：配置文件的更改
+- update tsconfig.json ([2190a78](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/2190a78))
+
+---
+
+## 🎉 v1.3.1 `2023-11-08`
+### ⚙️ 配置：配置文件的更改
+- update ([a8b421e](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/a8b421e))
 - update ([f7c83d6](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/f7c83d6))
+
+### 📦️ 发布：发布新版本
+- 1.3.1 ([7e98b6c](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/7e98b6c))
+- 1.3.0 ([a02ff57](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/a02ff57))
 
 ---
 

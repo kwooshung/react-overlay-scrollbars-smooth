@@ -1,9 +1,11 @@
-/* eslint-disable no-undef */
+const commitTypes = require('./tools/commitTypes.cjs');
+const commitScopes = require('./tools/commitScopes.cjs');
+
 module.exports = {
   // https://gitmoji.dev/ emoji表情
   releaseCommitMessageFormat: 'release: 🎉 v{{currentTag}}',
-  types: require('./tools/commitTypes.cjs'),
-  scopes: require('./tools/commitScopes.cjs').map(([value, description]) => {
+  types: commitTypes,
+  scopes: commitScopes.map(([value, description]) => {
     return {
       value,
       name: `${value.padEnd(30)} (${description})`
