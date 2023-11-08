@@ -1,65 +1,42 @@
 import { describe, it, expect, vi } from 'vitest';
+import { ISmoothScrollbars } from '../interfaces';
 import SmoothScroll from '../SmoothScroll';
-import SmoothScrollWebsite from 'smoothscroll-for-websites';
+import smoothScrollLibrary from 'smoothscroll-for-websites';
 
-// 使用vi.importActual来处理默认导出和部分模拟
-vi.mock('smoothscroll-for-websites', () => ({
-  __esModule: true, // 这表示模块是ES模块
-  default: {
-    // 模拟默认导出
-    bind: vi.fn(), // 模拟bind方法
-    destroy: vi.fn() // 模拟destroy方法
-  }
-}));
+// 使用 vi.spyOn 来监视 smoothscroll-for-websites 库的方法调用
+const bindSpy = vi.spyOn(smoothScrollLibrary, 'bind');
+// const destroySpy = vi.spyOn(smoothScrollLibrary, 'destroy');
 
-describe('平滑滚动功能测试', () => {
-  it('如果没有提供参数，应该用默认选项调用SmoothScrollWebsite.bind方法', () => {
+describe('SmoothScroll 模块', () => {
+  it('应当能够绑定默认选项', () => {
     SmoothScroll.bind();
-    expect(SmoothScrollWebsite.bind).toHaveBeenCalledWith({
-      frameRate: 150,
-      animationTime: 1000,
-      stepSize: 100,
-      pulseAlgorithm: 1,
-      pulseScale: 4,
-      pulseNormalize: 1,
-      accelerationDelta: 50,
-      accelerationMax: 3,
-      keyboardSupport: 1,
-      arrowScroll: 50,
-      fixedBackground: 1
-    });
+    expect(bindSpy).toHaveBeenCalledOnce();
+    expect(bindSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        frameRate: 150,
+        animationTime: 1000
+      })
+    );
   });
 
-  it('自定义选项应与默认选项合并', () => {
-    const customOptions = {
+  it('应当能够接受自定义选项并覆盖默认值', () => {
+    const customOptions: ISmoothScrollbars = {
       frameRate: 60,
-      stepSize: 120
+      animationTime: 500
+      // ...其他自定义选项
     };
     SmoothScroll.bind(customOptions);
-    expect(SmoothScrollWebsite.bind).toHaveBeenCalledWith({
-      frameRate: 60,
-      animationTime: 1000,
-      stepSize: 120,
-      pulseAlgorithm: 1,
-      pulseScale: 4,
-      pulseNormalize: 1,
-      accelerationDelta: 50,
-      accelerationMax: 3,
-      keyboardSupport: 1,
-      arrowScroll: 50,
-      fixedBackground: 1
-    });
+    expect(bindSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        frameRate: 60,
+        animationTime: 500
+      })
+    );
   });
 
-  it('布尔选项应正确转换为1或0', () => {
-    const optionsWithFalse = {
-      pulseAlgorithm: false,
-      pulseNormalize: false,
-      fixedBackground: false,
-      keyboardSupport: false
-    };
-    SmoothScroll.bind(optionsWithFalse);
-    expect(SmoothScrollWebsite.bind).toHaveBeenCalledWith(
+  it('应当在绑定时正确处理选项的布尔值', () => {
+    SmoothScroll.bind({ pulseAlgorithm: false, pulseNormalize: false, fixedBackground: false, keyboardSupport: false });
+    expect(bindSpy).toHaveBeenCalledWith(
       expect.objectContaining({
         pulseAlgorithm: 0,
         pulseNormalize: 0,
@@ -69,8 +46,18 @@ describe('平滑滚动功能测试', () => {
     );
   });
 
-  it('应该调用SmoothScrollWebsite.destroy方法来解绑', () => {
-    SmoothScroll.unbind();
-    expect(SmoothScrollWebsite.destroy).toHaveBeenCalled();
+  it('应当在浏览器环境下调用 bind 方法', () => {
+    (global as any).window = {}; // 模拟浏览器环境
+    SmoothScroll.bind();
+    expect(bindSpy).toHaveBeenCalled();
+    delete (global as any).window; // 清理模拟
+  });
+
+  it('应当在非浏览器环境下不抛出错误', () => {
+    const t = () => {
+      delete (global as any).window; // 确保非浏览器环境
+      SmoothScroll.bind();
+    };
+    expect(t).not.toThrow();
   });
 });

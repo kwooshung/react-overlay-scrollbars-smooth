@@ -2,6 +2,9 @@
 ### 💩 优化：代码优化
 - change import to require ([a5bda27](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/a5bda27))
 
+### 📦️ 发布：发布新版本
+- 1.3.4 ([7aabec8](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/7aabec8))
+
 ---
 
 ## 🎉 v1.3.3 `2023-11-08`
