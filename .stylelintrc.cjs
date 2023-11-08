@@ -1,23 +1,14 @@
 module.exports = {
   customSyntax: 'postcss-less',
   processors: [],
-  plugins: [
-    'stylelint-order'
-  ],
+  plugins: ['stylelint-order'],
   extends: ['stylelint-config-standard'], // 这是官方推荐的方式
-  ignoreFiles: [
-    './coverage/**/*.css'
-  ],
+  ignoreFiles: ['./coverage/**/*.css'],
   rules: {
     'at-rule-no-unknown': [
-      true, {
-        ignoreAtRules: [
-          'include',
-          'extends',
-          'ignores',
-          'import',
-          'mixin'
-        ]
+      true,
+      {
+        ignoreAtRules: ['include', 'extends', 'ignores', 'import', 'mixin']
       }
     ],
     indentation: 2,
@@ -79,9 +70,6 @@ module.exports = {
       'align-self',
       'order',
       'grid',
-      'grid-template-rows',
-      'grid-template-columns',
-      'grid-template-areas',
       'grid-auto-rows',
       'grid-auto-columns',
       'grid-auto-flow',
