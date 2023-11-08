@@ -19,11 +19,11 @@
     "noFallthroughCasesInSwitch": true,
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": ["src"],
+  "include": ["./src", "./typings.d.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
   ],
-  "typeRoots": ["node_modules/@types", "src/overlay-scrollbars-smooth/types"]
+  "typeRoots": ["node_modules/@types", "./typings.d.ts"]
 }

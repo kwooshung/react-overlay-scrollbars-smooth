@@ -1,4 +1,4 @@
-import { ISmoothScrollbars } from './types/interface';
+import { ISmoothScrollbars } from './interfaces';
 import SmoothScrollWebsite from 'smoothscroll-for-websites';
 
 const defaultOptions: ISmoothScrollbars = {

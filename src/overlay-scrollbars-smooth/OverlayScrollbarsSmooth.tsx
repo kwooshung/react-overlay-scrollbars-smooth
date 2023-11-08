@@ -1,6 +1,6 @@
 import styles from './index.module.less';
 import classnames from 'classnames';
-import { IOverlayScrollbarsSmoothProps } from './types/interface';
+import { IOverlayScrollbarsSmoothProps } from './interfaces';
 import OverlayScrollbarsSmoothBody from './OverlayScrollbarsSmoothBody';
 import OverlayScrollbarsSmoothElem from './OverlayScrollbarsSmoothElem';
 

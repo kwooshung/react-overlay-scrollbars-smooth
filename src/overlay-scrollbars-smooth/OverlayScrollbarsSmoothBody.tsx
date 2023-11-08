@@ -1,5 +1,5 @@
 import { useOverlayScrollbars } from 'overlayscrollbars-react';
-import { IOverlayScrollbarsSmoothProps } from './types/interface';
+import { IOverlayScrollbarsSmoothProps } from './interfaces';
 import { useEffect } from 'react';
 
 /**
