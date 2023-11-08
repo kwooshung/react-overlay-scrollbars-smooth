@@ -6,6 +6,7 @@ const defaultOptions: ISmoothScrollbars = {
   stepSize: 100,
   pulseAlgorithm: true,
   pulseScale: 4,
+  touchpadSupport: false,
   pulseNormalize: true,
   accelerationDelta: 50,
   accelerationMax: 3,

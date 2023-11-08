@@ -26,6 +26,10 @@ export interface ISmoothScrollbars {
    */
   pulseScale?: number;
   /**
+   * 触摸支持
+   */
+  touchpadSupport?: boolean;
+  /**
    * 用于归一化脉冲的值。
    */
   pulseNormalize?: boolean;
