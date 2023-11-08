@@ -39,19 +39,19 @@ This integration plugin is based on [OverlayScrollbars](https://github.com/KingS
 ### npm
 
 ```bash
-npm install @kwooshung/react-overlay-scrollbars-smooth --save-dev
+npm install @kwooshung/react-overlay-scrollbars-smooth
 ```
 
 ### yarn
 
 ```bash
-yarn add @kwooshung/react-overlay-scrollbars-smooth -D
+yarn add @kwooshung/react-overlay-scrollbars-smooth
 ```
 
 ### pnpm
 
 ```bash
-pnpm add @kwooshung/react-overlay-scrollbars-smooth -D
+pnpm add @kwooshung/react-overlay-scrollbars-smooth
 ```
 
 ## Usage

@@ -1,6 +1,7 @@
 ## 🎉 v1.4.0 `2023-11-08`
 ### 📦️ 发布：发布新版本
 - already tested and ready to use ([312131a](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/312131a))
+- 1.4.0 ([683ea58](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/683ea58))
 
 ---
 
