@@ -2,7 +2,7 @@
 
 # React Overlay Scrollbars Smooth
 
-This integration plugin is based on [OverlayScrollbars](https://github.com/KingSora/OverlayScrollbars/) and [smoothscroll-for-websites](https://github.com/gblazex/smoothscroll-for-websites). It conceals the native scrollbars and provides a custom-styled overlay scrollbar that retains native functionality and feel, with the added benefit of inertial scrolling.
+是一款基于 [OverlayScrollbars](https://github.com/KingSora/OverlayScrollbars/) 及 [smoothscroll-for-websites](https://github.com/gblazex/smoothscroll-for-websites) 的整合插件，它隐藏了原生滚动条，提供了自定义样式的覆盖滚动条，并保留了原生功能和感觉，同时具有滚动惯性。
 
 [![GitHub License](https://img.shields.io/github/license/kwooshung/react-overlay-scrollbars-smooth?labelColor=272e3b&color=165dff)](LICENSE)
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/kwooshung/react-overlay-scrollbars-smooth?labelColor=272e3b&color=00b42A&logo=github)
@@ -20,21 +20,21 @@ This integration plugin is based on [OverlayScrollbars](https://github.com/KingS
 [![Gitee Repo](https://img.shields.io/badge/Gitee-react--overlay--scrollbars--smooth-165dff?logo=gitee)](https://gitee.com/kwooshung/react-overlay-scrollbars-smooth/)
 
 <p align="center">
-    <a href="README.md" style="font-weight:700;color:#165dff;text-decoration: underline;">English</a> | 
-    <a href="README.zh-CN.md">中文</a>
+    <a href="README.md">English</a> | 
+    <a href="README.zh-CN.md" style="font-weight:700;color:#165dff;text-decoration: underline;">中文</a>
 </p>
 </div>
 
-## Why Develop It?
+## 为什么开发它？
 
-- I grew tired of the default browser scrollbars that look unappealing and vary across different browsers.
-- They failed to maintain a consistent appearance and behavior across various browsers and lacked deep customization options.
-- The default scrollbar doesn’t align with the design aesthetic of your website or application.
-- When pop-ups are needed, the scrollbar appears outside the popup, causing both the page's scrollbar and the popup's scrollbar to appear simultaneously, leading to a poor user experience.
-- When a Dialog/Modal pops up, it’s necessary to adjust the body’s padding-right, which requires special handling when the navigation bar is fixed, potentially causing jarring movements.
-- The scrollbar feels stiff and not smooth enough when using the mouse wheel to scroll.
+- 我不喜欢默认的浏览器滚动条，它们看起来很丑，而且在不同的浏览器中看起来也不一样。
+- 他无法在不同的浏览器中保持一致的外观和行为，无法深度自定义；
+- 默认滚动条，无法和你的网站或应用程序的设计风格保持一致；
+- 当需要弹窗时，滚动条会出现在弹窗外部，这样会导致页面的滚动条和弹窗的滚动条同时出现，这样会导致用户体验不佳；
+- 当(Dialog/Modal)弹窗时，需要对body进行padding-right，特别当导航条有position:fixed;的时候还需要对其进行特别处理，而且会产生晃动；
+- 滚动条，在鼠标滚轮滚动时，比较生硬不够顺滑；
 
-## Installation
+## 安装
 
 ### npm
 
@@ -54,36 +54,36 @@ yarn add @kwooshung/react-overlay-scrollbars-smooth -D
 pnpm add @kwooshung/react-overlay-scrollbars-smooth -D
 ```
 
-## Usage
+## 使用方法
 
-### Styles
+### 样式
 
-In some frameworks, you can directly introduce styles in global `css` / `less` / `scss`, as shown below:
+在某些框架中直接在全局`css` / `less` / `scss`中引入样式即可，如下所示：
 
 ```css
 @import url('@kwooshung/react-overlay-scrollbars-smooth/dist/react-overlay-scrollbars-smooth.css');
 ```
 
-In some frameworks, such as `Next.js`, you may need to add the `~` character, as shown below:
+在部分框架中，如 `Next.js` 中，可能需要加入`~`符，才行，如下所示：
 
 ```css
 @import url('~@kwooshung/react-overlay-scrollbars-smooth/dist/react-overlay-scrollbars-smooth.css');
 ```
 
-You can also introduce it in a global page, such as the `Layout` page in `Next.js` or the corresponding component, as shown below:
+你也可以在全局页面，如 `Next.js` 中的 `Layout` 页面 或 对应组件 中引入，如下所示：
 
 ```tsx
 import '@kwooshung/react-overlay-scrollbars-smooth/dist/react-overlay-scrollbars-smooth.css';
 ```
 
-### components
+### 组件
 
-Use the `OverlayScrollbarsSmooth` component on an element as follows:
+在某个元素上使用 `OverlayScrollbarsSmooth` 组件，如下所示：
 
 ```tsx
 import { OverlayScrollbarsSmooth } from '@kwooshung/react-overlay-scrollbars-smooth';
 
-// What is used here is to introduce secondary styles directly into the component. You can also use other methods above.
+// 这里使用的是直接在组件中引入次样式，也可以使用上面其他的方式
 import '@kwooshung/react-overlay-scrollbars-smooth/dist/react-overlay-scrollbars-smooth.css';
 
 function App() {
@@ -97,20 +97,20 @@ function App() {
 }
 ```
 
-If you want it to work on `Body`, you can do this:
+如果你想让它作用于 `Body` 上，可以这样做：
 
 ```tsx
 import { OverlayScrollbarsSmooth } from '@kwooshung/react-overlay-scrollbars-smooth';
 
 function App() {
-  // No matter where this line of code is written, as long as `tag=body`, it will act on `Body`, thus replacing the default scroll bar. Don’t forget to include styles!
+  // 这行代码无论写到什么地方，只要 `tag=body`，它就会作用于 `Body` 上，从而替代默认滚动条。别忘记引入样式！
   return <OverlayScrollbarsSmooth tag='body' />;
 }
 ```
 
 ### hooks
 
-You can directly use `useSmoothScroll` to achieve smooth scrolling, which will cause all scroll bars to become smooth. **It is recommended to call it once in a place such as global layout**, as shown below:
+你可以直接使用 `useSmoothScroll` 实现平滑滚动，它将会导致所有的滚动条都变得平滑，**建议在全局布局之类的地方**调用一次即可，如下所示：
 
 ```tsx
 import { OverlayScrollbarsSmooth, useSmoothScroll } from '@kwooshung/react-overlay-scrollbars-smooth';
@@ -133,18 +133,18 @@ function App() {
 
 #### OverlayScrollbarsSmooth
 
-The `OverlayScrollbarsSmooth` component supports all `OverlayScrollbars` APIs, you can view [OverlayScrollbars API](https://github.com/KingSora/OverlayScrollbars/tree/master/packages/overlayscrollbars-react#properties) here.
+`OverlayScrollbarsSmooth` 组件支持所有 `OverlayScrollbars` 的 API，你可以在这里查看 [OverlayScrollbars API](https://github.com/KingSora/OverlayScrollbars/tree/master/packages/overlayscrollbars-react#properties)。
 
-| Properties | Description                                                                                                                                           |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tag        | `string`, default value: `div`, if it is: `body`, acts on `Body`, thus replacing the default scroll bar. `element` equivalent to `OverlayScrollbars`; |
-| className  | `string`, default value: `''`, custom class name; invalid when `tag`=`body`;                                                                          |
-| options    | Equivalent to `options` of `OverlayScrollbars`, default: `{scrollbars: {theme: 'os-theme-dark'}}`                                                     |
-| events     | Equivalent to `events` of `OverlayScrollbars`, default: `{}`                                                                                          |
+| 属性      | 说明                                                                                                                     |
+| --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| tag       | `string`，默认值：`div`，如果是：`body`，作用于 `Body` 上，从而替代默认滚动条。等同于 `OverlayScrollbars` 的 `element`； |
+| className | `string`，默认值：`''`，自定义类名；`tag`=`body` 时，无效；                                                              |
+| options   | 等同于 `OverlayScrollbars` 的 `options`，默认：`{scrollbars: {theme: 'os-theme-dark'}}`                                  |
+| events    | 等同于 `OverlayScrollbars` 的 `events`，默认：`{}`                                                                       |
 
 #### useSmoothScroll
 
-Supports all parameters of `smoothscroll-for-websites` except `excluded`, you can view it here [smoothscroll-for-websites API](https://github.com/gblazex/smoothscroll-for-websites/wiki) , the following parameters are also default values (it is slightly different from the default value of `smoothscroll-for-websites`), you can modify it according to your own needs, as shown below
+支持 `smoothscroll-for-websites` 除 `excluded` 之外的所有参数，你可以在这里查看 [smoothscroll-for-websites API](https://github.com/gblazex/smoothscroll-for-websites/wiki)，以下参数同时也是默认值（它和 `smoothscroll-for-websites` 的默认值略有区别），你可以根据自己的需求进行修改，如下所示
 
 ```tsx
 import { OverlayScrollbarsSmooth, useSmoothScroll } from '@kwooshung/react-overlay-scrollbars-smooth';
@@ -186,13 +186,13 @@ function App() {
 }
 ```
 
-## Open source projects used
+## 用到的开源项目
 
-> Thanks to the project authors for their selfless contributions to the open source community, making our work easier! ! !
+> 感谢项目作者为开源社区的无私贡献，让我们的工作变得更加简单！！！
 
-- [OverlayScrollbars：Excellent scroll bar custom component](https://github.com/KingSora/OverlayScrollbars/)
-- [smoothscroll-for-websites：Excellent scroll bar smoothing script](https://github.com/gblazex/smoothscroll-for-websites)
+- [OverlayScrollbars：优秀的滚动条自定义组件](https://github.com/KingSora/OverlayScrollbars/)
+- [smoothscroll-for-websites：优秀的滚动条平滑脚本](https://github.com/gblazex/smoothscroll-for-websites)
 
-## LICENSE
+## 许可证
 
 [MIT](LICENSE)
