@@ -1,5 +1,4 @@
 import { ISmoothScrollbars } from './interfaces';
-import SmoothScrollWebsite from 'smoothscroll-for-websites';
 
 const defaultOptions: ISmoothScrollbars = {
   frameRate: 150,
@@ -22,6 +21,7 @@ const defaultOptions: ISmoothScrollbars = {
  * @link https://github.com/gblazex/smoothscroll-for-websites
  */
 const bind = (options: ISmoothScrollbars = defaultOptions): void => {
+  const SmoothScrollWebsite = require('smoothscroll-for-websites');
   const conf: any = Object.assign({}, defaultOptions, options);
   conf.pulseAlgorithm = conf.pulseAlgorithm ? 1 : 0;
   conf.pulseNormalize = conf.pulseNormalize ? 1 : 0;
@@ -36,6 +36,7 @@ const bind = (options: ISmoothScrollbars = defaultOptions): void => {
  * @returns {void}
  */
 const unbind = () => {
+  const SmoothScrollWebsite = require('smoothscroll-for-websites');
   SmoothScrollWebsite.destroy();
 };
 
