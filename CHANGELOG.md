@@ -2,6 +2,9 @@
 ### ⚙️ 配置：配置文件的更改
 - update tsconfig.json ([86f732c](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/86f732c))
 
+### 📦️ 发布：发布新版本
+- 1.3.3 ([4248f97](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/4248f97))
+
 ---
 
 ## 🎉 v1.3.2 `2023-11-08`
