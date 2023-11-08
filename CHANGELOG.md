@@ -3,6 +3,7 @@
 - fix installation commands ([cc5779c](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/cc5779c))
 
 ### 📦️ 发布：发布新版本
+- 1.4.1 ([b348f1c](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/b348f1c))
 - already tested and ready to use ([312131a](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/312131a))
 - 1.4.0 ([683ea58](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/683ea58))
 
