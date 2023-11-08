@@ -1,3 +1,9 @@
+## 🎉 v1.3.4 `2023-11-08`
+### 💩 优化：代码优化
+- change import to require ([a5bda27](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/a5bda27))
+
+---
+
 ## 🎉 v1.3.3 `2023-11-08`
 ### ⚙️ 配置：配置文件的更改
 - update tsconfig.json ([86f732c](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/86f732c))
