@@ -1,6 +1,45 @@
+## 🎉 v1.4.7 `2023-11-10`
+### 🔗 依赖更新：更新依赖库或包
+- update ([c5ca480](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/c5ca480))
+
+---
+
+## 🎉 v1.4.6 `2023-11-10`
+### 📦️ 发布：发布新版本
+- 1.4.6 ([44ab0a3](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/44ab0a3))
+
+---
+
+## 🎉 v1.4.5 `2023-11-10`
+### 📦️ 发布：发布新版本
+- 1.4.5 ([ea847b0](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/ea847b0))
+
+---
+
+## 🎉 v1.4.4 `2023-11-10`
+### 📚 文档：变更的只有文档
+- update styles ([ac3c209](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/ac3c209))
+
+### 📦️ 发布：发布新版本
+- 1.4.4 ([c064d96](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/c064d96))
+
+---
+
+## 🎉 v1.4.3 `2023-11-10`
+### 📚 文档：变更的只有文档
+- update links ([5b2f61b](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/5b2f61b))
+
+### 📦️ 发布：发布新版本
+- 1.4.3 ([6905db8](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/6905db8))
+
+---
+
 ## 🎉 v1.4.2 `2023-11-08`
 ### ⚙️ 配置：配置文件的更改
 - update description ([e5deb20](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/e5deb20))
+
+### 📦️ 发布：发布新版本
+- 1.4.2 ([6ade157](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/6ade157))
 
 ---
 

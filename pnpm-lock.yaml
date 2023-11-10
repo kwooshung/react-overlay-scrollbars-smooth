@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^18.1.0
     version: 18.1.0
   '@kwooshung/standard-version-helper':
-    specifier: ^1.5.2
-    version: 1.5.3(node@21.1.0)
+    specifier: ^1.6.0
+    version: 1.6.0(node@21.1.0)
   '@swc/core':
     specifier: ^1.3.95
     version: 1.3.96
@@ -913,8 +913,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@kwooshung/standard-version-helper@1.5.3(node@21.1.0):
-    resolution: {integrity: sha512-J9bPk1qazom/XoeQN1V0fGDBTc9bgRNTH/f2lKcx+j8IsFnW8y1lh1SMAh7srXL3RUMcSLiyjbz6feMqeRjlXQ==}
+  /@kwooshung/standard-version-helper@1.6.0(node@21.1.0):
+    resolution: {integrity: sha512-i4PLvetHFqaTU4Ck64rbKru32lNiBeT1yGbg/5nt6FDrYCFCrGJFPQ3EL3reE1gfmDxcYHUOX6xklue5lM/h6w==}
     hasBin: true
     peerDependencies:
       node: '>=14.0.0'
