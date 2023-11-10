@@ -1,6 +1,14 @@
+## 🎉 v1.4.5 `2023-11-10`
+- 没有特别说明
+
+---
+
 ## 🎉 v1.4.4 `2023-11-10`
 ### 📚 文档：变更的只有文档
 - update styles ([ac3c209](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/ac3c209))
+
+### 📦️ 发布：发布新版本
+- 1.4.4 ([c064d96](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/c064d96))
 
 ---
 
