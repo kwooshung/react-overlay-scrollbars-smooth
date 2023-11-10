@@ -1,3 +1,9 @@
+## 🎉 v1.4.8 `2023-11-10`
+### ⚙️ config
+- update ([d2befcd](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/d2befcd))
+
+---
+
 ## 🎉 v1.4.7 `2023-11-10`
 ### 📦️ release
 - 1.4.7 ([d7c8845](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/d7c8845))
