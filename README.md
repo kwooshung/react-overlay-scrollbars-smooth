@@ -20,7 +20,7 @@ This integration plugin is based on [OverlayScrollbars](https://github.com/KingS
 [![Gitee Repo](https://img.shields.io/badge/Gitee-react--overlay--scrollbars--smooth-165dff?logo=gitee)](https://gitee.com/kwooshung/react-overlay-scrollbars-smooth/)
 
 <p align="center">
-    <a href="README.md" style="font-weight:700;color:#165dff;text-decoration: underline;">English</a> | 
+    <a href="README.md" style="font-weight:700;color:#165dff;text-decoration:underline;">English</a> | 
     <a href="README.zh-CN.md">中文</a>
 </p>
 </div>
