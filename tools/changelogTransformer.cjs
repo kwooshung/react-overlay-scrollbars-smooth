@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const CHANGELOG_PATH = 'CHANGELOG.md'; // 替换为你的changelog文件路径
+const CHANGELOG_PATH = 'CHANGELOG.md';
 
 const types = require('./commitTypes.cjs');
 
@@ -9,14 +9,6 @@ const parseCommitType = (commit) => {
     if (commit.includes(type.value)) return type;
   }
   return null;
-};
-
-const getEmojiFromValue = (value) => {
-  return value.split(' ')[0];
-};
-
-const getSimpleTypeName = (name) => {
-  return name.split(':')[0].trim();
 };
 
 const transformChangelog = (content) => {
@@ -65,13 +57,13 @@ const transformChangelog = (content) => {
       const type = parseCommitType(commit);
       if (!type) continue;
 
-      if (!categorized[type.name]) {
-        categorized[type.name] = [];
+      if (!categorized[type.value]) {
+        categorized[type.value] = [];
       }
 
       const message = commit.split('): ')[1];
       if (message) {
-        categorized[type.name].push(`- ${message}`);
+        categorized[type.value].push(`- ${message}`);
       }
     }
 
@@ -84,19 +76,18 @@ const transformChangelog = (content) => {
     }
 
     if (!hasValidContent) {
-      result += '- 没有特别说明\n\n';
+      result += '- No specific explanation provided\n\n';
       continue;
     }
 
     for (const [category, items] of Object.entries(categorized)) {
-      const type = types.find((t) => t.name === category);
-      const emoji = getEmojiFromValue(type.value);
-      const simpleName = getSimpleTypeName(category);
-      result += `### ${emoji} ${simpleName}\n`;
-      items.forEach((item) => {
-        result += `${item}\n`;
-      });
-      result += '\n';
+      if (items.length > 0) {
+        result += `### ${category}\n`;
+        items.forEach((item) => {
+          result += `${item}\n`;
+        });
+        result += '\n';
+      }
     }
   }
 

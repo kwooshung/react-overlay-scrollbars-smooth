@@ -2,6 +2,7 @@ module.exports = [
   ['components', '组件相关'],
   ['hooks', 'hook 相关'],
   ['utils', 'utils 相关'],
+  ['lib', 'lib 相关'],
   ['styles', '样式相关'],
   ['ui', '用户界面调整'],
   ['auth', '对 auth 修改'],

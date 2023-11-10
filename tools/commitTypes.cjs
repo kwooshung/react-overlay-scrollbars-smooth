@@ -1,5 +1,6 @@
 module.exports = [
   { value: '🍻 init', name: '初始：初始提交' },
+  { value: '🆕 add', name: '新增：新建文件' },
   { value: '✨ feat', name: '特性：新的特性' },
   { value: '🐛 fix', name: '修复：修复Bug' },
   { value: '📚 docs', name: '文档：变更的只有文档' },
