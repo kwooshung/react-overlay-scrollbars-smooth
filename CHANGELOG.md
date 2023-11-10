@@ -2,6 +2,9 @@
 ### ⚙️ 配置：配置文件的更改
 - update description ([e5deb20](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/e5deb20))
 
+### 📦️ 发布：发布新版本
+- 1.4.2 ([6ade157](https://github.com/kwooshung/react-overlay-scrollbars-smooth/commit/6ade157))
+
 ---
 
 ## 🎉 v1.4.1 `2023-11-08`

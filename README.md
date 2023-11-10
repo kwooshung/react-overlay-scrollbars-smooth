@@ -13,7 +13,7 @@ This integration plugin is based on [OverlayScrollbars](https://github.com/KingS
 ![GitHub issues](https://img.shields.io/github/issues/kwooshung/react-overlay-scrollbars-smooth?labelColor=272e3b&color=165dff)
 ![Github Stars](https://img.shields.io/github/stars/kwooshung/react-overlay-scrollbars-smooth?labelColor=272e3b&color=165dff)
 [![NPM Version](https://img.shields.io/npm/v/@kwooshung/react-overlay-scrollbars-smooth?labelColor=272e3b&color=165dff)](https://www.npmjs.com/package/@kwooshung/react-overlay-scrollbars-smooth)
-[![Npm.js Downloads/Week](https://img.shields.io/npm/dw/%40kwooshung%2Freact-overlay-scrollbars-smooth?labelColor=272e3b&labelColor=272e3b&color=165dff&logo=npm)](https://www.npmjs.com/package/@kwooshung/react-overlay-scrollbars-smooth)
+[![Npm.js Downloads/Week](https://img.shields.io/npm/dw/@kwooshung/react-overlay-scrollbars-smooth?labelColor=272e3b&labelColor=272e3b&color=165dff&logo=npm)](https://www.npmjs.com/package/@kwooshung/react-overlay-scrollbars-smooth)
 [![Github CI/CD](https://github.com/kwooshung/react-overlay-scrollbars-smooth/actions/workflows/ci.yml/badge.svg)](https://github.com/kwooshung/react-overlay-scrollbars-smooth/actions/)
 [![codecov](https://codecov.io/gh/kwooshung/react-overlay-scrollbars-smooth/graph/badge.svg?token=VVZJE7H0KD)](https://codecov.io/gh/kwooshung/react-overlay-scrollbars-smooth)
 [![Maintainability](https://api.codeclimate.com/v1/badges/325d0881b1ca19165d35/maintainability)](https://codeclimate.com/github/kwooshung/react-overlay-scrollbars-smooth/maintainability/)
