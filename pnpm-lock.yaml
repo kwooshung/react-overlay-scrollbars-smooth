@@ -14,9 +14,6 @@ dependencies:
   overlayscrollbars-react:
     specifier: ^0.5.3
     version: 0.5.4(overlayscrollbars@2.5.0)(react@18.2.0)
-  smoothscroll-for-websites:
-    specifier: ^1.4.10
-    version: 1.4.10
 
 devDependencies:
   '@kwooshung/cvlar':
@@ -7174,10 +7171,6 @@ packages:
       ansi-styles: 6.2.1
       is-fullwidth-code-point: 5.0.0
     dev: true
-
-  /smoothscroll-for-websites@1.4.10:
-    resolution: {integrity: sha512-4/4RdF+wbXD2RqylKpzaU2CO+cngt/rCE81FP5Hc0jFbTma0mouCwMBvfMDHXQXFJsVS0FOMSNfPQdlAu8HkcQ==}
-    dev: false
 
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}

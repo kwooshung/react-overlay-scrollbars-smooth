@@ -1,4 +1,5 @@
 import { ISmoothScrollbars } from './interfaces';
+import smooth from './Smooth.js';
 
 const defaultOptions: ISmoothScrollbars = {
   frameRate: 150,
@@ -22,7 +23,7 @@ const defaultOptions: ISmoothScrollbars = {
 const loadSmoothScrollLibrary = (): any => {
   if (typeof window !== 'undefined') {
     // 这是客户端环境，可以安全地导入库
-    return require('smoothscroll-for-websites');
+    return smooth;
   }
 
   // 在非浏览器环境下，我们返回一个假的对象，防止报错

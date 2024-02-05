@@ -1,6 +1,6 @@
 {
   "name": "@kwooshung/react-overlay-scrollbars-smooth",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "title": "React Overlay Scrollbars Smooth",
   "description": "A React scrollbar custom component that hides the native scrollbar, provides a custom style overlay scrollbar, and retains the native functionality and feel while having scrolling inertia.",
   "private": false,
@@ -33,7 +33,7 @@
   },
   "type": "module",
   "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
+  "module": "dist/index.esm.js",
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -64,8 +64,7 @@
   "dependencies": {
     "classnames": "^2.3.2",
     "overlayscrollbars": "^2.4.4",
-    "overlayscrollbars-react": "^0.5.3",
-    "smoothscroll-for-websites": "^1.4.10"
+    "overlayscrollbars-react": "^0.5.3"
   },
   "peerDependencies": {
     "react": ">=16.6.0",
@@ -73,8 +72,6 @@
   },
   "devDependencies": {
     "@kwooshung/cvlar": "^1.3.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@swc/core": "^1.3.107",
     "@swc/jest": "^0.2.34",
     "@testing-library/jest-dom": "^6.4.1",
@@ -104,6 +101,8 @@
     "lint-staged": "^15.2.1",
     "postcss-less": "^6.0.0",
     "prettier": "^3.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "stylelint": "^16.2.1",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-order": "^6.0.4",
