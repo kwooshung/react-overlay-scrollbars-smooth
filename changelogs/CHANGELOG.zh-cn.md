@@ -1,3 +1,7 @@
+## 🎉 2.0.2 `2024-02-06`
+### 🐛 Fix
+- 调整测试覆盖范围，否则将涵盖无关的文件 ([#848ec9c](https://github.com/kwooshung/files/commit/848ec9cf382832ff849a8dc3e72b90976b20108e))
+
 ## 🎉 2.0.1 `2024-02-05`
 ### 🆕 Add
 - 添加.gitignore项目 ([#5e94026](https://github.com/kwooshung/files/commit/5e94026231c84344dfc19189399a7bef69fe17db))

@@ -1,6 +1,6 @@
 {
   "name": "@kwooshung/react-overlay-scrollbars-smooth",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "title": "React Overlay Scrollbars Smooth",
   "description": "A React scrollbar custom component that hides the native scrollbar, provides a custom style overlay scrollbar, and retains the native functionality and feel while having scrolling inertia.",
   "private": false,
@@ -56,7 +56,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "test:watch": "vitest watch",
+    "test:watch": "vitest watch --coverage",
     "test:ci": "vitest run --coverage",
     "stylelint": "stylelint --fix --cache --quiet --max-warnings 0 --config .stylelintrc.cjs \"**/*.{css,less,scss,sass,stylus,styl}\"",
     "eslint": "eslint . --fix --cache --quiet --report-unused-disable-directives --max-warnings 0 --ext .js,.cjs,.jsx,.ts,.cts,.tsx"
