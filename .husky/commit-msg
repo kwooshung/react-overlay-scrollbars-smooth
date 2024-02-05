@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 使用 npx 运行 commitlint 检查最近的提交信息
+npx --no-install commitlint --edit $1
