@@ -39,7 +39,12 @@ export default defineConfig({
     globals: true,
     setupFiles: './vitest-setup.ts',
     environment: 'jsdom',
-    exclude: ['src/__visual_tests__', '**/node_modules/**', '**/dist/**', '**/cypress/**', '**/.{idea,git,cache,output,temp}/**']
+    include: ['src/overlay-scrollbars-smooth/__test__/**'],
+    exclude: ['**/node_modules/**', '**/dist/**'],
+    coverage: {
+      include: ['src/overlay-scrollbars-smooth/**/*.{ts,tsx}'],
+      exclude: ['src/overlay-scrollbars-smooth/index.ts', 'src/overlay-scrollbars-smooth/SmoothScroll.ts', 'src/overlay-scrollbars-smooth/interfaces.d.ts']
+    }
   },
   css: {
     modules: {
