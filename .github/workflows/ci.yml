@@ -1,0 +1,65 @@
+name: ci
+
+# 当推送到 main分支 时 触发此工作流
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@main
+
+      # 全局安装 pnpm
+      - name: install pnpm
+        run: npm install -g pnpm
+
+      # 使用 pnpm 安装依赖
+      - name: install dependencies
+        run: pnpm install
+
+      # 使用 pnpm 执行测试
+      - name: run tests
+        run: pnpm test:ci
+
+      # 上传覆盖率报告到 Coveralls
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@main
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      # 使用 pnpm 构建
+      - name: build
+        run: pnpm build
+
+      # 自动发布
+      - name: Auto Release
+        run: npx cvlar -r
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 同步到 Gitee
+      - name: Sync to Gitee
+        uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+        with:
+          source-repo: 'git@github.com:kwooshung/react-overlay-scrollbars-smooth.git'
+          destination-repo: 'git@gitee.com:kwooshung/react-overlay-scrollbars-smooth.git'
+
+      # 自动发布到 npm
+      - name: Sync to Npm.js
+        uses: actions/setup-node@main
+        with:
+          node-version: '16.14.0'
+          registry-url: https://registry.npmjs.org/
+      - name: Publish to Npm.js
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
